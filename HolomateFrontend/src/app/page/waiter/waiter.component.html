@@ -1,0 +1,18 @@
+
+
+<header>
+    <h2>Chat with AI Waiter</h2>
+  </header>
+  
+  <main class="chat-container">
+    <div *ngFor="let msg of conversationHistory" class="message" [ngClass]="msg.role === 'user' ? 'user-msg' : 'assistant-msg'">
+      <strong>{{ msg.role === 'user' ? 'You' : 'Waiter' }}:</strong> {{ msg.content }}
+    </div>
+  </main>
+  
+  <!-- <app-avatar></app-avatar> -->
+  <footer class="chat-footer">
+    <button (click)="startListening()">🎙️ Talk</button>
+    <input [(ngModel)]="userMessage" placeholder="Type or talk..." (keyup.enter)="sendMessage()" />
+    <button (click)="sendMessage()">Send</button>
+  </footer>
