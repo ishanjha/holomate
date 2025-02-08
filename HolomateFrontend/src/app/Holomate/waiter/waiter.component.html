@@ -1,0 +1,18 @@
+
+<h2>Click here to talk with me ---</h2>
+<button (click)="startListening()" [disabled]="isListening">
+    {{ isListening ? "🎧 Listening..." : "🎙️ Talk" }}
+</button>
+
+<main class="chat-container">
+    <app-avatar [aiResponse]="aiResponse"></app-avatar>
+
+</main>
+
+
+
+
+
+
+
+

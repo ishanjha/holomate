@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AvatarComponent } from './page/avatar/avatar.component';
-import { WaiterComponent } from './page/waiter/waiter.component';
+import { AvatarComponent } from './Holomate/avatar/avatar.component';
+import { WaiterComponent } from './Holomate/waiter/waiter.component';
+import { ChatholomateComponent } from './Holomate/chatholomate/chatholomate.component';
+
 
 const routes: Routes = [
   {
@@ -9,8 +11,12 @@ const routes: Routes = [
     component:AvatarComponent
   },
   {
-    path:"waiter",
+    path:"",
     component:WaiterComponent
+  },
+  {
+    path:"chat",
+    component:ChatholomateComponent
   }
 ];
 
