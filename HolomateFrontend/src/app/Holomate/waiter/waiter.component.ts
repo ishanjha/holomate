@@ -122,7 +122,7 @@ export class WaiterComponent {
     const speakNextSentence = () => {
       if (index < sentences.length) {
         const utterance = new SpeechSynthesisUtterance(sentences[index].trim());
-        utterance.lang = 'es-MX'; 
+        utterance.lang = 'es-US'; 
         utterance.rate = 1.0;
         utterance.pitch = 1.0;
         utterance.volume = 1.0;

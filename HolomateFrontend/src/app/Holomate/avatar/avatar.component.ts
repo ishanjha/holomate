@@ -78,7 +78,7 @@ export class AvatarComponent implements OnInit, OnDestroy, OnChanges{
   loadAvatarModel() {
     const loader = new GLTFLoader();
     loader.load(
-      'https://models.readyplayer.me/67a215665c836d19da4a5e52.glb',
+      "https://models.readyplayer.me/67a83719811f205d7183464b.glb",
       (gltf: { scene: any }) => {
         const model = gltf.scene;
         model.position.y = 0.2;
@@ -209,7 +209,7 @@ export class AvatarComponent implements OnInit, OnDestroy, OnChanges{
     const speakNextSentence = () => {
       if (index < sentences.length) {
         const utterance = new SpeechSynthesisUtterance(sentences[index].trim());
-        utterance.lang = 'es-MX'; 
+        utterance.lang = 'es-US'; 
         utterance.rate = 1.0;
         utterance.pitch = 1.0;
         utterance.volume = 1.0;
